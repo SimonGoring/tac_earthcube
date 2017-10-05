@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Throughput - EarthCube TAC</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/sjg_custom.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,123 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Throughput:<br>
+					<small><a href=https://www.nsf.gov/awardsearch/showAward?AWD_ID=1740699 target="_blank" style="color:white">Annotating Scientific Data</a></small></h1>
+					<h2 style = "font-variant:small-caps">Collaborative Proposal</h2>
+					Simon Goring<sup>1</sup>;
+					Doug Fils<sup>2</sup>; Eric C. Grimm<sup>3</sup>; Daisie Huang<sup>4</sup>; 
+					Stephen Kuehn<sup>5</sup>; Kerstin Lehnert<sup>6</sup>;
+					<br>Nick McKay<sup>7</sup>; Amy Myrbo<sup>3</sup>; Anders Noren<sup>3</sup>; Steve Richard<sup>6</sup>; Jack Williams<sup>1</sup></p>
+				    
+				    <p style="font-size:0.9rem"><sup>1</sup>University of Wisconsin - Madison, <sup>2</sup>Ocean Leadership, <sup>3</sup>University of Minnesota, <sup>4</sup>Data Dryad, <sup>5</sup> Concord University, <br><sup>6</sup>Lamont Doherty Earth Observatory, <sup>7</sup>Northern Arizona University</p>
+					<footer>
+						<img src="images/Packrat.svg" height=80px/>  
+						<img src="images/UW-Madison_logo.svg" height=80px/>  
+						<img src="images/logo_earthcube_full_horizontal.png" height=80px/>  
+						<img src="images/throughput.svg" height=80px>
+						<img src="images/nsf4.png" height=80px>
+					</footer>
+				</section>
+				<section data-background="#871000">
+					<section>
+						<h1>Motivation</h1>
+						<h2>→ <b>Information entropy</b> ←</h2>
+						<img src=images/michner_entropy.svg height=400em><br>
+					</section>
+					<section id='email'>
+						<h3>User question:</h3>
+						<pre>
+							A few of the calibrated chronologies have duplicate ages, for example Tower Lake:
+
+							> A <- get_download(13047)
+							> A[[1]]$chronologies$PalEON
+
+							There is an entry for age 7091 ybp twice.
+						</pre>
+						<h3>Expert response:</h3>
+						<pre style="color:#000D10">
+							Hi XXXXXXXXX, thanks for getting in touch.  In that case the result is fine, but I found an error in one of the other records that I've now corrected.  The reason for the duplicate there is that the author counted multiple samples from the same depth.
+						</pre>
+					</section>
+					<section>
+						<h1>Science is Cultural</h1>
+						<img src=images/noun_21051.svg height=400em>
+					</section>
+					<section>
+						<h1>But Data is Shared</h1>
+						<img src=images/problems_circle_data.svg height=400em>
+					</section>
+				</section>
+				<section data-background="#B47D00">
+					<section>
+						<img src=images/throughput_square.svg height=400em>
+					</section>
+					<section>
+						<h1>Key Elements</h1>
+						<ul>
+							<li>Standards survey & reporting</li>
+							<li>Cross-domain data mapping (tephra)</li>
+							<li>Secondary data capture - <b>Annotation Engine</b></li>
+						</ul>
+				
+					</section>
+				</section>
+				<section data-background="#875E00">
+					<section>
+						<img src="images/noun_1197967_cc.svg" style="opacity:0.5" height=500em>
+						<div style="position:absolute;top:20px;">
+							<h1>Data Standards in the Long Tail</h1>
+							<ul style="font-size:2em">
+								<li>Many <i>ad hoc</i> databases</li>
+								<li>Project-based, few informatics experts</li>
+								<li>User-focused - documentation needed</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<h1>Cross-Domain Discovery</h1>
+						<img src="images/paths_of_tephra.svg" height=400em>
+					</section>
+					<section>
+						<img src="images/problems_circle_data.svg" height=500em>
+					</section>
+				</section>
+				<section>
+					<section>
+						<img src="images/package_graph.svg" height=500em style="opacity:0.4">
+						<div style="position:absolute;top:20px;">
+							<h1>Annotation Engine</h1>
+						</div>
+					</section>
+					<section>
+						<h1>Annotations as Objects</h1>
+						<img src=images/annotation_system.svg height=400em>
+					</section>
+					<section>
+						<h1>Features</h1>
+						<h2>W3C Annotations using <i>neo4j</i></h2>
+						<img src=images/package_graph.svg height=300em><br>
+						rOpenSci Packages linked to GitHub Repositories
+					</section>
+					
+					<section>
+						<h1>Features</h1>
+						<h2 style="font-size:1.5em">OAuth2 management using ORCiD; API First Design</h2>
+						<img src="images/Throughput_pattern.svg" height=400em>
+					</section>
+
+				</section>
+
+				<section>
+					W3C Annotation Standards
+					author - schema.org or foaf
+					Datasets as objects
+					Bodies & Targets
+					Supports both individuals and agents - GitHub graph.
+					W3C Provenance Standards
+					Doug Fils
+				</section>
 			</div>
 		</div>
 
